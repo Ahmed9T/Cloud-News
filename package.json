@@ -1,0 +1,17 @@
+{
+  "name": "cloud-news-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static cloud news dashboard powered by RSS feeds.",
+  "scripts": {
+    "update-news": "node scripts/fetch-news.js",
+    "validate-news": "node -e \"const fs=require('node:fs'); const data=JSON.parse(fs.readFileSync('news.json','utf8')); if (!data.lastUpdated || !Array.isArray(data.items)) process.exit(1); console.log('news.json valid:', data.items.length, 'items');\""
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

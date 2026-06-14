@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Atomic-write temp file from scripts/fetch-news.js
+news.json.tmp
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
